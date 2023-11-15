@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 // Importamos los archivos css
+=======
+// Importamos los archivos css 
+import './desarrollo.css';
+>>>>>>> origin/desarrollojs
 
 
 
@@ -12,9 +17,16 @@ function dibujarDados() {
     // Obtenemos los dados
     const dados = document.querySelectorAll('.dado');
 
+<<<<<<< HEAD
     // Generamos un número aleatorio para cada dado
     dados.forEach(dado => {
         // Creamos la imagen del dado
+=======
+    //generamos u n numero aleatorio para cada dado
+    for (let i = 0; i < dados.length; i++) {
+        const dado = dados[i];
+        //cargamos la imagen dado
+>>>>>>> origin/desarrollojs
         const imagen = document.createElement('img');
         imagen.src = `img/dado-${generarNumeroAleatorio()}.png`;
 
