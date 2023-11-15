@@ -1,5 +1,5 @@
 // Importamos los archivos css 
-import './styles.css'
+import './desarrollo.css'
 
 //creamos una funcion para generar un numero aleatorio en tre 1 y 6 
 function generarNumeroAleatorio() {
@@ -19,7 +19,7 @@ function dibujarDados() {
         imagen.src = `img/dado-${generarNumeroAleatorio()}.png`;
 
         //agregar la imagen al dado
-        dado.appendChild(imagen);
+        dados.appendChild(imagen);
     }
 }
 
