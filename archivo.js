@@ -1,32 +1,34 @@
-// Importamos los archivos css 
-import './desarrollo.css'
+// Importamos los archivos css
 
-//creamos una funcion para generar un numero aleatorio en tre 1 y 6 
+
+
+// Creamos una función para generar un número aleatorio entre 1 y 6 
 function generarNumeroAleatorio() {
     return Math.floor(Math.random() * 6) + 1;
 }
 
-//creamos un funcion para dubujar los dados 
+// Creamos una función para dibujar los dados 
 function dibujarDados() {
-    //obtenemos los dados
+    // Obtenemos los dados
     const dados = document.querySelectorAll('.dado');
 
-    //generamos u n numero aleatorio para cada dado
-    for (let i = 0; i < dados.length; i++ ){
-
-        //cargamos la imagen dado
+    // Generamos un número aleatorio para cada dado
+    dados.forEach(dado => {
+        // Creamos la imagen del dado
         const imagen = document.createElement('img');
         imagen.src = `img/dado-${generarNumeroAleatorio()}.png`;
 
-        //agregar la imagen al dado
-        dados.appendChild(imagen);
-    }
+        // Agregamos la imagen al dado
+        dado.appendChild(imagen);
+    });
 }
 
-//llamamos a la funcion paras dibujar los dados 
+// Llamamos a la función para dibujar los dados 
 dibujarDados();
-//escuchamos el evento click en el boton
-document.querySelector('#lanzar').addEventListener('click', () => {
-    //lanzamos los dados
-    dibujarDados();
+
+// Escuchamos el evento click en el botón
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelector('#lanzar').addEventListener('click', () => {
+        dibujarDados();
+    });
 });
