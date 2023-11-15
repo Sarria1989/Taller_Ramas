@@ -1,5 +1,5 @@
 // Importamos los archivos css 
-import './styles.css'
+import './desarrollo.css';
 
 //creamos una funcion para generar un numero aleatorio en tre 1 y 6 
 function generarNumeroAleatorio() {
@@ -12,8 +12,8 @@ function dibujarDados() {
     const dados = document.querySelectorAll('.dado');
 
     //generamos u n numero aleatorio para cada dado
-    for (let i = 0; i < dados.length; i++ ){
-
+    for (let i = 0; i < dados.length; i++) {
+        const dado = dados[i];
         //cargamos la imagen dado
         const imagen = document.createElement('img');
         imagen.src = `img/dado-${generarNumeroAleatorio()}.png`;
